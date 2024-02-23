@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: podnode
+  labels:
+    app: podnode
+spec:
+  nodeSelector:
+   
+    cloudethix-k8s-00: worker-0
+  containers:
+    - name: podnode
+      image: vivekmore5292/cloudethix_master_nginx_vivek:v1
+      command: ['sh', '-c', 'echo Hello Kubernetes! && sleep 3600']

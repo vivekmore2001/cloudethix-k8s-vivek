@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod2
+spec:
+  nodeName: worker-1 # Assigning to Worker Node 2
+  containers:
+  - name: nginx-container1
+    image: vivekmore5292/cloudethix_master_nginx_vivek:v1
+
